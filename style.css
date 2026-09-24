@@ -1,0 +1,274 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    background: #f3f6fa;
+    color: #202938;
+    line-height: 1.6;
+}
+
+.hero {
+    background: linear-gradient(135deg, #102a43, #1d4e89);
+    color: white;
+    padding: 55px 20px;
+}
+
+.hero-contenido {
+    max-width: 1050px;
+    margin: auto;
+    display: flex;
+    align-items: center;
+    gap: 35px;
+}
+
+.foto-perfil {
+    width: 190px;
+    height: 190px;
+    object-fit: cover;
+    border-radius: 50%;
+    border: 6px solid white;
+    background: white;
+}
+
+.etiqueta {
+    letter-spacing: 2px;
+    font-size: 13px;
+    margin-bottom: 5px;
+    opacity: 0.85;
+}
+
+h1 {
+    font-size: 48px;
+    margin-bottom: 8px;
+}
+
+.subtitulo {
+    font-size: 18px;
+    margin-bottom: 22px;
+}
+
+.boton {
+    display: inline-block;
+    background: white;
+    color: #173f68;
+    text-decoration: none;
+    padding: 11px 22px;
+    border-radius: 25px;
+    font-weight: bold;
+}
+
+.menu {
+    background: white;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 8px;
+    padding: 14px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+    position: sticky;
+    top: 0;
+    z-index: 10;
+}
+
+.menu a {
+    text-decoration: none;
+    color: #23415f;
+    padding: 8px 12px;
+    border-radius: 8px;
+    font-size: 14px;
+}
+
+.menu a:hover {
+    background: #e8f0f8;
+}
+
+.contenedor {
+    max-width: 1050px;
+    margin: 35px auto;
+    padding: 0 20px;
+}
+
+.seccion {
+    background: white;
+    margin-bottom: 25px;
+    padding: 30px;
+    border-radius: 16px;
+    box-shadow: 0 5px 18px rgba(22, 39, 60, 0.08);
+}
+
+.seccion h2 {
+    color: #173f68;
+    margin-bottom: 20px;
+    font-size: 28px;
+    border-left: 5px solid #2b78c5;
+    padding-left: 12px;
+}
+
+.tarjetas {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 15px;
+}
+
+.tarjeta, article, .curso, .enlace {
+    border: 1px solid #dfe7ef;
+    border-radius: 12px;
+    padding: 18px;
+    background: #f9fbfd;
+}
+
+.tarjeta strong, .tarjeta span {
+    display: block;
+}
+
+.tarjeta strong {
+    color: #53718e;
+    margin-bottom: 4px;
+}
+
+.linea-tiempo {
+    border-left: 3px solid #2b78c5;
+    padding-left: 22px;
+}
+
+.item {
+    margin-bottom: 20px;
+}
+
+.item:last-child {
+    margin-bottom: 0;
+}
+
+.item h3, article h3, .curso h3 {
+    color: #234f78;
+    margin-bottom: 5px;
+}
+
+.experiencias {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 15px;
+}
+
+.idioma {
+    padding: 10px 0;
+}
+
+.barra {
+    width: 100%;
+    height: 13px;
+    background: #e4eaf0;
+    border-radius: 20px;
+    margin-top: 15px;
+    overflow: hidden;
+}
+
+.barra span {
+    display: block;
+    width: 40%;
+    height: 100%;
+    background: #2b78c5;
+    border-radius: 20px;
+}
+
+.recomendaciones {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 15px;
+}
+
+blockquote {
+    background: #f7faff;
+    border-left: 4px solid #2b78c5;
+    padding: 18px;
+    border-radius: 10px;
+}
+
+cite {
+    display: block;
+    margin-top: 12px;
+    font-size: 13px;
+    color: #63768a;
+}
+
+.nota {
+    margin-top: 15px;
+    font-size: 13px;
+    color: #6b7280;
+}
+
+.enlaces {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 15px;
+}
+
+.enlace {
+    text-decoration: none;
+    color: #203b57;
+}
+
+.enlace:hover {
+    transform: translateY(-2px);
+}
+
+.enlace span, .enlace small {
+    display: block;
+}
+
+.enlace span {
+    font-weight: bold;
+    font-size: 18px;
+}
+
+.enlace small {
+    margin-top: 5px;
+    color: #60758b;
+}
+
+footer {
+    text-align: center;
+    background: #102a43;
+    color: white;
+    padding: 25px;
+}
+
+@media (max-width: 800px) {
+    .hero-contenido {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    h1 {
+        font-size: 38px;
+    }
+
+    .experiencias,
+    .recomendaciones,
+    .enlaces {
+        grid-template-columns: 1fr;
+    }
+}
+
+@media (max-width: 550px) {
+    .tarjetas {
+        grid-template-columns: 1fr;
+    }
+
+    .foto-perfil {
+        width: 150px;
+        height: 150px;
+    }
+
+    .seccion {
+        padding: 20px;
+    }
+}
